@@ -546,7 +546,7 @@ Install_caddy(){
 	[[ -z "$caddy_yn" ]] && caddy_yn="y"
 	if [[ "${caddy_yn}" == [Yy] ]]; then
 		if [[ ! -e "/usr/local/caddy/caddy" ]]; then
-			wget -N --no-check-certificate https://raw.githubusercontent.com/xiao9426/doubi/master/caddy_install.sh
+			wget -N --no-check-certificate https://raw.githubusercontent.com/xiao9426/doubi/master/caddyn_install.sh
 			chmod +x caddy_install.sh
 			bash caddy_install.sh install
 			[[ ! -e "/usr/local/caddy/caddy" ]] && echo -e "${Error} Caddy安装失败，请手动部署，Web网页文件位置：${Web_file}" && exit 0
